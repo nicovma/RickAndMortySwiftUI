@@ -19,26 +19,26 @@ struct CharacterListView: View {
             Text(errorText)
         case .loaded(let characters):
             NavigationView {
-                List(characters, id: \.self) { character in
-                    NavigationLink {
-                        Text(character.name + " Detail")
-                            .foregroundColor(.gray)
-                    } label: {
-                        Label("\(character.name)", systemImage: "rays")
-                            .onAppear(perform: {
-                                if character == characters.last {
-                                    viewModel.fetchMoreIfNeeded()
-                                }
-                            })
-                    }
-                }
-                .navigationTitle("Characters")
-                .searchable(text: $viewModel.searchText)
-                .onChange(of: viewModel.searchText, perform: { newValue in
-                    Task {
+                VStack {
+                    SearchBar(text: $viewModel.searchText, searchCompletion: {
                         viewModel.filter()
+                    })
+                            
+                    List(characters, id: \.self) { character in
+                        NavigationLink {
+                            Text(character.name + " Detail")
+                                .foregroundColor(.gray)
+                        } label: {
+                            Label("\(character.name)", systemImage: "rays")
+                                .onAppear(perform: {
+                                    if character == characters.last {
+                                        viewModel.fetchMoreIfNeeded()
+                                    }
+                                })
+                        }
                     }
-                })
+                    .navigationTitle("Characters")
+                }
             }
         }
     }
