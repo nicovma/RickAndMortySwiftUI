@@ -12,12 +12,14 @@ struct CharacterRow: View {
     var character: CharacterInformation
     
     var body: some View {
-        HStack{
+        HStack(alignment:.center){
             DownloadedImage(imageURL: character.image, placeholder: "person")
-                .frame(width: 80, height: 80)
-            VStack(alignment: .leading) {
+                .frame(width: 100, height: 100)
+            VStack(alignment: .leading, spacing: 0) {
                 Text(character.name)
-                    .foregroundColor(.gray)
+                    .bold()
+                    .font(Font.title2)
+                    .foregroundColor(.accentColor)
                 CharacterStatusView(status: character.status)
                 HStack{
                     Text(character.species)
@@ -30,7 +32,6 @@ struct CharacterRow: View {
                     }
                 }
             }
-
         }
     }
 }

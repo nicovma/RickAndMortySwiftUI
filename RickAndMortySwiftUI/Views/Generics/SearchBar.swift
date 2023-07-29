@@ -27,13 +27,11 @@ struct SearchBar: View {
                     Label(NSLocalizedString("search", comment: ""), systemImage: "magnifyingglass")
                 })
                 .disabled(text == searchedBy)
-                
             }
             .padding()
             .background(Color.gray.opacity(0.2))
             .cornerRadius(10)
 
-            
             if (searchedBy != "") {
                 HStack {
                     Text(NSLocalizedString("filteredBy", comment: "") + searchedBy)
@@ -45,15 +43,13 @@ struct SearchBar: View {
                         // Close the keyboard
                         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                     }, label: {
-                        Text("X")
+                        Image(systemName: "multiply")
                     })
                     .tint(Color.red)
-                    
                 }
                 .padding()
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(10)
-                
             }   
         }
     }
