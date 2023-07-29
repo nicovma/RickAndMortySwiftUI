@@ -26,6 +26,7 @@
 		4AA6D7AA2A75700D00283EB8 /* DownloadedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6D7A92A75700D00283EB8 /* DownloadedImage.swift */; };
 		4AA6D7AC2A75759A00283EB8 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6D7AB2A75759A00283EB8 /* SearchBar.swift */; };
 		4AA6D7AE2A75869600283EB8 /* CharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6D7AD2A75869600283EB8 /* CharacterRow.swift */; };
+		4AA6D7B52A75974300283EB8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4AA6D7B72A75974300283EB8 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		4AA6D7A92A75700D00283EB8 /* DownloadedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedImage.swift; sourceTree = "<group>"; };
 		4AA6D7AB2A75759A00283EB8 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		4AA6D7AD2A75869600283EB8 /* CharacterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRow.swift; sourceTree = "<group>"; };
+		4AA6D7B62A75974300283EB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; usesTabs = 0; };
+		4AA6D7BA2A759A3B00283EB8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,7 @@
 		4AA6D75A2A75694A00283EB8 = {
 			isa = PBXGroup;
 			children = (
+				4AA6D7B72A75974300283EB8 /* Localizable.strings */,
 				4AA6D7652A75694A00283EB8 /* RickAndMortySwiftUI */,
 				4AA6D7762A75694D00283EB8 /* RickAndMortySwiftUITests */,
 				4AA6D7802A75694D00283EB8 /* RickAndMortySwiftUIUITests */,
@@ -300,11 +304,11 @@
 			};
 			buildConfigurationList = 4AA6D75E2A75694A00283EB8 /* Build configuration list for PBXProject "RickAndMortySwiftUI" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = es;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				es,
 			);
 			mainGroup = 4AA6D75A2A75694A00283EB8;
 			productRefGroup = 4AA6D7642A75694A00283EB8 /* Products */;
@@ -324,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AA6D76E2A75694C00283EB8 /* Preview Assets.xcassets in Resources */,
+				4AA6D7B52A75974300283EB8 /* Localizable.strings in Resources */,
 				4AA6D76B2A75694C00283EB8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,11 +403,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		4AA6D7B72A75974300283EB8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4AA6D7B62A75974300283EB8 /* en */,
+				4AA6D7BA2A759A3B00283EB8 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		4AA6D7852A75694D00283EB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -463,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

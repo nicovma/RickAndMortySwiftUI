@@ -16,8 +16,7 @@ struct SearchBar: View {
     var body: some View {
         VStack {
             HStack {
-                TextField("Search", text: $text)
-                    .padding(.horizontal)
+                TextField(NSLocalizedString("searchBarPlaceholder", comment: ""), text: $text)
                 Button(action: {
                     // Call the search completion handler
                     searchCompletion()
@@ -25,7 +24,7 @@ struct SearchBar: View {
                     // Close the keyboard
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }, label: {
-                    Text("Search")
+                    Text(NSLocalizedString("search", comment: ""))
                 })
                 .disabled(text == searchedBy)
                 
@@ -37,7 +36,7 @@ struct SearchBar: View {
             
             if (searchedBy != "") {
                 HStack {
-                    Text("Filtered by: " + searchedBy)
+                    Text(NSLocalizedString("filteredBy", comment: "") + searchedBy)
                     Button(action: {
                         // Call the search completion handler
                         text = ""

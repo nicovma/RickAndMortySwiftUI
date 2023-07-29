@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  RickAndMortySwiftUI
+
+  Created by Nico Valentini Mac Adden on 29/07/2023.
+  
+*/
+
+// Titles
+
+"characters" = "Characters";
+"episodes" = "Episodes";
+"locations" = "Locations";
+
+"search" = "Search";
+
+// SearchBar
+
+"filteredBy" = "Filtered by: ";
+"searchBarPlaceholder" = "Search by name";
+
+
+

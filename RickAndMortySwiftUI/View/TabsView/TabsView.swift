@@ -12,15 +12,15 @@ struct TabsView: View {
         TabView {
             CharacterListView()
                 .tabItem {
-                    Label("Characters", systemImage: "person")
+                    Label(NSLocalizedString("characters", comment: ""), systemImage: "person")
                 }
-            Text("Episodes")
+            Text(NSLocalizedString("episodes", comment: ""))
                 .tabItem {
-                    Label("Episodes", systemImage: "film")
+                    Label(NSLocalizedString("episodes", comment: ""), systemImage: "film")
                 }
-            Text("Locations")
+            Text(NSLocalizedString("locations", comment: ""))
                 .tabItem {
-                    Label("Locations", systemImage: "mappin.and.ellipse")
+                    Label(NSLocalizedString("locations", comment: ""), systemImage: "mappin.and.ellipse")
                 }
         }
     }

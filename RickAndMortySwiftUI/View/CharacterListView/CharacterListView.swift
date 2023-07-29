@@ -38,7 +38,7 @@ struct CharacterListView: View {
                         }
                     }
                     .listStyle(PlainListStyle())
-                    .navigationTitle("Characters")
+                    .navigationTitle(Text(NSLocalizedString("characters", comment: "")))
                 }
             }
         }

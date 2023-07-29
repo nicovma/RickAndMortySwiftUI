@@ -20,15 +20,7 @@ struct APIParameters{
         var page: Int?
     }
     
-    
-    
-    
-    struct ProductParams: Encodable  {
-        var skip: Int?
-        var limit: Int?
-    }
-    
-    struct AddProductParams: Encodable {
-        var title: String?
-    }
+//    struct AddProductParams: Encodable {
+//        var title: String?
+//    }
 }
