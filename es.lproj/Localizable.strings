@@ -6,7 +6,6 @@
   
 */
 
-
 // Titles
 
 "characters" = "Personajes";
@@ -38,3 +37,5 @@
 "decodingError" = "Error en la decodifiicacion.";
 "urlSessionFailed" = "Error en la sesion URL.";
 "timeOut" = "Tiempo de espera excedido.";
+
+

@@ -305,7 +305,7 @@
 			};
 			buildConfigurationList = 4AA6D75E2A75694A00283EB8 /* Build configuration list for PBXProject "RickAndMortySwiftUI" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = es;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,

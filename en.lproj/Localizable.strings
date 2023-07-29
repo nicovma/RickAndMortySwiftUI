@@ -6,6 +6,7 @@
   
 */
 
+
 // Titles
 
 "characters" = "Characters";
@@ -37,6 +38,3 @@
 "decodingError" = "Decoding error.";
 "urlSessionFailed" = "URL sesion error.";
 "timeOut" = "Timeout error.";
-
-
-
