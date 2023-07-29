@@ -57,6 +57,7 @@ class CharacterViewModel: ObservableObject {
             }
         }
         receiveValue: { [weak self] response in
+            
             if self?.pageNumber ?? 1 > 1 {
                 self?.characters += response.results
             } else {
@@ -64,6 +65,7 @@ class CharacterViewModel: ObservableObject {
             }
             
             self?.hasNext = (response.info.next != nil)
+            
             if let characters = self?.characters {
                 self?.state = State.loaded(characters)
             } else {

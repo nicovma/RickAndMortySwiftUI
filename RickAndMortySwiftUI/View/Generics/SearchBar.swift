@@ -13,23 +13,28 @@ struct SearchBar: View {
     var searchCompletion: () -> Void
     
     var body: some View {
-        HStack {
-            TextField("Buscar", text: $text)
-                .padding(.horizontal)
-            
-            Button(action: {
-                // Call the search completion handler
-                searchCompletion()
+        VStack {
+            HStack {
+                TextField("Buscar", text: $text)
+                    .padding(.horizontal)
                 
-                // Close the keyboard
-                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-            }, label: {
-                Text("Search")
-            })
+                Button(action: {
+                    // Call the search completion handler
+                    searchCompletion()
+                    
+                    // Close the keyboard
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                }, label: {
+                    Text("Search")
+                })
+                
+            }
+            .padding()
+            .background(Color.gray.opacity(0.2))
+            .cornerRadius(10)
+
+            // TODO: show text "filtered by: "
         }
-        .padding()
-        .background(Color.gray.opacity(0.2))
-        .cornerRadius(10)
     }
 }
 

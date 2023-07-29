@@ -23,13 +23,13 @@ struct CharacterListView: View {
                     SearchBar(text: $viewModel.searchText, searchCompletion: {
                         viewModel.filter()
                     })
-                            
+                    .padding(.horizontal)
                     List(characters, id: \.self) { character in
                         NavigationLink {
                             Text(character.name + " Detail")
                                 .foregroundColor(.gray)
                         } label: {
-                            Label("\(character.name)", systemImage: "rays")
+                            CharacterRow(character: character)
                                 .onAppear(perform: {
                                     if character == characters.last {
                                         viewModel.fetchMoreIfNeeded()
@@ -37,6 +37,7 @@ struct CharacterListView: View {
                                 })
                         }
                     }
+                    .listStyle(PlainListStyle())
                     .navigationTitle("Characters")
                 }
             }

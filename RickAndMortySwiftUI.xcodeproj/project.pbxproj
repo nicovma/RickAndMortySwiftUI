@@ -25,6 +25,7 @@
 		4AA6D7A72A756A8600283EB8 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6D7A62A756A8600283EB8 /* Log.swift */; };
 		4AA6D7AA2A75700D00283EB8 /* DownloadedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6D7A92A75700D00283EB8 /* DownloadedImage.swift */; };
 		4AA6D7AC2A75759A00283EB8 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6D7AB2A75759A00283EB8 /* SearchBar.swift */; };
+		4AA6D7AE2A75869600283EB8 /* CharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6D7AD2A75869600283EB8 /* CharacterRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		4AA6D7A62A756A8600283EB8 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		4AA6D7A92A75700D00283EB8 /* DownloadedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedImage.swift; sourceTree = "<group>"; };
 		4AA6D7AB2A75759A00283EB8 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		4AA6D7AD2A75869600283EB8 /* CharacterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				4AA6D7922A7569AF00283EB8 /* CharacterViewModel.swift */,
 				4AA6D7942A7569CC00283EB8 /* CharacterListView.swift */,
+				4AA6D7AD2A75869600283EB8 /* CharacterRow.swift */,
 			);
 			path = CharacterListView;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				4AA6D79B2A756A0D00283EB8 /* CharactersModel.swift in Sources */,
 				4AA6D7A22A756A5500283EB8 /* APIParameters.swift in Sources */,
 				4AA6D7672A75694A00283EB8 /* RickAndMortySwiftUIApp.swift in Sources */,
+				4AA6D7AE2A75869600283EB8 /* CharacterRow.swift in Sources */,
 				4AA6D7982A7569ED00283EB8 /* TabsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
