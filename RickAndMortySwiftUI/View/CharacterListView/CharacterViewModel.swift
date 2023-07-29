@@ -38,6 +38,7 @@ class CharacterViewModel: ObservableObject {
     }
     
     func filter(){
+        self.state = .loading
         pageNumber = 1
         getCharacters()
     }
