@@ -29,7 +29,38 @@ enum NetworkRequestError: LocalizedError, Equatable {
     case urlSessionFailed(_ error: URLError)
     case timeOut
     case unknownError
+    
+    var errorDescription: String {
+        switch self {
+        case .serverError:
+            return NSLocalizedString("serverError", comment: "")
+        case .unknownError:
+            return NSLocalizedString("unknownError", comment: "")
+        case .invalidRequest:
+            return NSLocalizedString("invalidRequest", comment: "")
+        case .badRequest:
+            return NSLocalizedString("badRequest", comment: "")
+        case .unauthorized:
+            return NSLocalizedString("unauthorized", comment: "")
+        case .forbidden:
+            return NSLocalizedString("forbidden", comment: "")
+        case .notFound:
+            return NSLocalizedString("notFound", comment: "")
+        case .error4xx(_):
+            return NSLocalizedString("error4xx", comment: "")
+        case .error5xx(_):
+            return NSLocalizedString("error5xx", comment: "")
+        case .decodingError(_):
+            return NSLocalizedString("decodingError", comment: "")
+        case .urlSessionFailed(_):
+            return NSLocalizedString("urlSessionFailed", comment: "")
+        case .timeOut:
+            return NSLocalizedString("timeOut", comment: "")
+        }
+    }
 }
+
+
 
 // Extending Encodable to Serialize a Type into a Dictionary
 extension Encodable {

@@ -15,7 +15,26 @@
 
 "search" = "Buscar";
 
+"loading" = "Cargando...";
+
+"retry" = "Reintentar";
+
 // SearchBar
 
 "filteredBy" = "Filtrado por: ";
 "searchBarPlaceholder" = "Ingrese un nombre";
+
+// Error
+
+"unknownError" = "Error desconocido.";
+"invalidRequest" = "Solicitd invalida.";
+"badRequest" = "Error en la solicitud.";
+"unauthorized" = "No tienes acceso.";
+"forbidden" = "No tienes permisos.";
+"notFound" = "No se han encontrado resultados.";
+"error4xx" = "Error 4xx.";
+"serverError" = "Error de servidos.";
+"error5xx" = "Error 5xx.";
+"decodingError" = "Error en la decodifiicacion.";
+"urlSessionFailed" = "Error en la sesion URL.";
+"timeOut" = "Tiempo de espera excedido.";

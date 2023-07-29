@@ -14,10 +14,29 @@
 
 "search" = "Search";
 
+"loading" = "Loading...";
+
+"retry" = "Retry";
+
 // SearchBar
 
 "filteredBy" = "Filtered by: ";
 "searchBarPlaceholder" = "Search by name";
+
+// Error
+
+"unknownError" = "Unknown error.";
+"invalidRequest" = "Invalid Request.";
+"badRequest" = "Error in request.";
+"unauthorized" = "You don't have access.";
+"forbidden" = "You don't have permission.";
+"notFound" = "No results found.";
+"error4xx" = "Error 4xx.";
+"serverError" = "Server error.";
+"error5xx" = "Error 5xx.";
+"decodingError" = "Decoding error.";
+"urlSessionFailed" = "URL sesion error.";
+"timeOut" = "Timeout error.";
 
 
 

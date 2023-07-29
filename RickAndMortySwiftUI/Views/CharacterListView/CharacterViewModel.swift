@@ -46,6 +46,14 @@ class CharacterViewModel: ObservableObject {
         getCharacters()
     }
     
+    func retry(){
+        self.state = .loading
+        pageNumber = 1
+        searchText = ""
+        searchedText = searchText
+        getCharacters()
+    }
+    
     //GET Method
     func getCharacters() {
         APIClient.dispatch(
@@ -56,7 +64,7 @@ class CharacterViewModel: ObservableObject {
             case .finished:
                 break
             case .failure(let error):
-                self.state = State.failed(error.localizedDescription)
+                self.state = State.failed(error.errorDescription)
             }
         }
         receiveValue: { [weak self] response in
@@ -72,7 +80,7 @@ class CharacterViewModel: ObservableObject {
             if let characters = self?.characters {
                 self?.state = State.loaded(characters)
             } else {
-                self?.state = State.failed("Error getting characters")
+                self?.state = State.failed(NSLocalizedString("unknownError", comment: ""))
             }
         }.store(in: &cancelable)
     }

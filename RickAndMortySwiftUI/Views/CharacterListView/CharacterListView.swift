@@ -14,9 +14,11 @@ struct CharacterListView: View {
     var body: some View {
         switch viewModel.state {
         case .loading:
-            ProgressView()
+            LoadingView(text: NSLocalizedString("loading", comment: ""))
         case .failed(let errorText):
-            Text(errorText)
+            ErrorView(text: errorText, retryCompletion: {
+                viewModel.retry()
+            })
         case .loaded(let characters):
             NavigationView {
                 VStack {

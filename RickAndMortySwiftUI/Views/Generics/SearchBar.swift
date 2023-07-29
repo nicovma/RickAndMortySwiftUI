@@ -14,7 +14,7 @@ struct SearchBar: View {
     var searchedBy: String
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack {
                 TextField(NSLocalizedString("searchBarPlaceholder", comment: ""), text: $text)
                 Button(action: {
@@ -24,7 +24,7 @@ struct SearchBar: View {
                     // Close the keyboard
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }, label: {
-                    Text(NSLocalizedString("search", comment: ""))
+                    Label(NSLocalizedString("search", comment: ""), systemImage: "magnifyingglass")
                 })
                 .disabled(text == searchedBy)
                 
@@ -47,6 +47,7 @@ struct SearchBar: View {
                     }, label: {
                         Text("X")
                     })
+                    .tint(Color.red)
                     
                 }
                 .padding()
