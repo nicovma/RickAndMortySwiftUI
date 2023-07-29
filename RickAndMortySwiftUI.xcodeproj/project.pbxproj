@@ -125,7 +125,7 @@
 				4AA6D7A52A756A7800283EB8 /* Utilities */,
 				4AA6D79C2A756A2300283EB8 /* Networking */,
 				4AA6D7992A756A0000283EB8 /* Model */,
-				4AA6D7902A75699A00283EB8 /* View */,
+				4AA6D7902A75699A00283EB8 /* Views */,
 				4AA6D7662A75694A00283EB8 /* RickAndMortySwiftUIApp.swift */,
 				4AA6D7682A75694A00283EB8 /* ContentView.swift */,
 				4AA6D76A2A75694C00283EB8 /* Assets.xcassets */,
@@ -159,14 +159,14 @@
 			path = RickAndMortySwiftUIUITests;
 			sourceTree = "<group>";
 		};
-		4AA6D7902A75699A00283EB8 /* View */ = {
+		4AA6D7902A75699A00283EB8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				4AA6D7A82A756FFE00283EB8 /* Generics */,
 				4AA6D7962A7569DF00283EB8 /* TabsView */,
 				4AA6D7912A7569A300283EB8 /* CharacterListView */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4AA6D7912A7569A300283EB8 /* CharacterListView */ = {
