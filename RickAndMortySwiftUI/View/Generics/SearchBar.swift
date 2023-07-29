@@ -11,13 +11,13 @@ struct SearchBar: View {
     
     @Binding var text: String
     var searchCompletion: () -> Void
+    var searchedBy: String
     
     var body: some View {
         VStack {
             HStack {
-                TextField("Buscar", text: $text)
+                TextField("Search", text: $text)
                     .padding(.horizontal)
-                
                 Button(action: {
                     // Call the search completion handler
                     searchCompletion()
@@ -27,20 +27,40 @@ struct SearchBar: View {
                 }, label: {
                     Text("Search")
                 })
+                .disabled(text == searchedBy)
                 
             }
             .padding()
             .background(Color.gray.opacity(0.2))
             .cornerRadius(10)
 
-            // TODO: show text "filtered by: "
+            
+            if (searchedBy != "") {
+                HStack {
+                    Text("Filtered by: " + searchedBy)
+                    Button(action: {
+                        // Call the search completion handler
+                        text = ""
+                        searchCompletion()
+                        
+                        // Close the keyboard
+                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    }, label: {
+                        Text("X")
+                    })
+                    
+                }
+                .padding()
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(10)
+                
+            }   
         }
     }
 }
 
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
-        SearchBar(text: .constant("")) {
-        }
+        SearchBar(text: .constant(""), searchCompletion: {},searchedBy: "")
     }
 }

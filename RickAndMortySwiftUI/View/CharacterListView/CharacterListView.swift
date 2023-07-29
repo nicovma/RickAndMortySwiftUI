@@ -22,7 +22,7 @@ struct CharacterListView: View {
                 VStack {
                     SearchBar(text: $viewModel.searchText, searchCompletion: {
                         viewModel.filter()
-                    })
+                    }, searchedBy: viewModel.searchedText)
                     .padding(.horizontal)
                     List(characters, id: \.self) { character in
                         NavigationLink {

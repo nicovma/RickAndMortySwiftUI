@@ -26,6 +26,8 @@ class CharacterViewModel: ObservableObject {
     private var hasNext: Bool = false
     private var characters: [CharacterInformation] = []
     
+    var searchedText = ""
+    
     init() {
         getCharacters()
     }
@@ -40,6 +42,7 @@ class CharacterViewModel: ObservableObject {
     func filter(){
         self.state = .loading
         pageNumber = 1
+        searchedText = searchText
         getCharacters()
     }
     
